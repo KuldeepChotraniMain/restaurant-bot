@@ -11,7 +11,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from google import genai
 
-GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', 'AIzaSyDYW_MOl4eopSthrzYl1NZWJ6aGE1cxy6Y')
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', '')
 gemini_client = genai.Client(api_key=GOOGLE_API_KEY) if GOOGLE_API_KEY else None
 
 app = Flask(__name__, static_folder='../frontend1', static_url_path='')
